@@ -1,0 +1,8 @@
+.orders {
+    background-color: rgb(171, 234, 255);
+    border-radius: 20px;
+
+    margin: 20px;
+    border: 10px solid rgb(219, 5, 130);
+    padding: 30px;
+}

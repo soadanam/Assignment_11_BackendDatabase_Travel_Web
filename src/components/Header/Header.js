@@ -48,7 +48,7 @@ const Header = () => {
                             <li><a href='/PlaceOrder'>PlaceOr!</a></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a className="btn btn-ghost normal-case text-xl">Travelian</a>
                 </div>
 
                 {/* simple menubar  */}

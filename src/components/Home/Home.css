@@ -7,13 +7,28 @@
     src: url('../../fonts/Reey-Regular.ttf');
 }
 
+
+
 /* //////////////// */
 
-.image {
-    /* transition: 10s; */
+.carousel-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-item {
+    flex-shrink: 0;
+    min-height: 100vh;
+}
+
+/* carouselInner.style.transform = `translateY(-${index * 100}vh)`; */
+
+
+.item {
+    transition: 3s;
     /* width: 50%; */
     animation-name: slide;
-    animation-duration: 30s;
+    animation-duration: 5s;
 }
 
 @keyframes slide {
@@ -83,7 +98,7 @@
 }
 
 .btn-circle {
-    background-color: rgba(19, 13, 13, 0.245);
+    background-color: rgba(255, 102, 102, 0.245);
     width: 20px;
     /* height: 40px !important; */
     border-radius: 100px;
@@ -136,4 +151,61 @@
     font-family: sans-serif, 'Inspiration', cursive;
     color: white;
     font-weight: 500;
+}
+
+
+
+
+
+@media(max-width: 300px) {
+    .flowbite-carousel-content-container {
+        height: 80px;
+    }
+
+    .indicator {
+        display: none;
+    }
+
+}
+
+@media(min-width:1024px) {
+    .flowbite-carousel-content-container {
+        height: 380px;
+    }
+}
+
+@media(min-width:1280px) {
+    .flowbite-carousel-content-container {
+        height: 480px;
+    }
+}
+
+@media(min-width:1536px) {
+    .flowbite-carousel-content-container {
+        height: 550px;
+    }
+}
+
+@media(min-width:1636px) {
+    .flowbite-carousel-content-container {
+        height: 600px;
+    }
+}
+
+@media(min-width:1736px) {
+    .flowbite-carousel-content-container {
+        height: 640px;
+    }
+}
+
+@media(min-width:1900px) {
+    .flowbite-carousel-content-container {
+        height: 700px;
+    }
+}
+
+@media(min-width:2000px) {
+    .flowbite-carousel-content-container {
+        height: 750px;
+    }
 }

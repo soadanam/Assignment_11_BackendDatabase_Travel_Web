@@ -363,7 +363,7 @@ const Home = () => {
                                 <input type="radio" name="rating-2" className="mask mask-star-2 g-orange-400" />
 
 
-                                <p className=' text-left'> 12k+ Rating</p>
+                                <p className=' text-left'> 45k+ Rating</p>
 
                                 <button onClick={navigateToPlaceOrderPage} className="btn btn-error">BOOK NOW</button>
                             </div>
@@ -385,7 +385,7 @@ const Home = () => {
                             <div className="rating">
                                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
 
-                                <p className=' text-left'> 12k+ Rating</p>
+                                <p className=' text-left'> 82k+ Rating</p>
 
                                 <button onClick={navigateToPlaceOrderPage} className="btn btn-error">BOOK NOW</button>
                             </div>
@@ -409,7 +409,7 @@ const Home = () => {
                             <div className="rating">
                                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
 
-                                <p className=' text-left'> 12k+ Rating</p>
+                                <p className=' text-left'> 17k+ Rating</p>
 
                                 <button onClick={navigateToPlaceOrderPage} className="btn btn-error">BOOK NOW</button>
                             </div>
@@ -433,7 +433,7 @@ const Home = () => {
                             <div className="rating">
                                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
 
-                                <p className=' text-left'> 12k+ Rating</p>
+                                <p className=' text-left'> 11k+ Rating</p>
 
                                 <button onClick={navigateToPlaceOrderPage} className="btn btn-error">BOOK NOW</button>
                             </div>
@@ -457,7 +457,7 @@ const Home = () => {
                             <div className="rating">
                                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
 
-                                <p className=' text-left'> 12k+ Rating</p>
+                                <p className=' text-left'> 22k+ Rating</p>
 
                                 <button onClick={navigateToPlaceOrderPage} className="btn btn-error">BOOK NOW</button>
                             </div>
@@ -481,7 +481,7 @@ const Home = () => {
                             <div className="rating">
                                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
 
-                                <p className=' text-left'> 12k+ Rating</p>
+                                <p className=' text-left'> 64k+ Rating</p>
 
                                 <button onClick={navigateToPlaceOrderPage} className="btn btn-error">BOOK NOW</button>
                             </div>
@@ -497,29 +497,35 @@ const Home = () => {
 
 
 
+
             {/* Add a New Service - Section  */}
-            <div className="new-service bg-lime-200 mt-20 pt-5 container mx-auto">
-                <h3 className='pb-7'>{services[1]?.data?.category} </h3>
+            <div className="new-service mt-20 pt-5 container mx-auto">
+                <h2 className='modern-trendy'>Modern & Trendy</h2>
+                <h2 className='new-service-title'>{services[1]?.data?.category} </h2>
 
-                <div className="tours bg-fuchsia-600 grid lg:grid-cols-12 md:grid-cols-8 sm:grid-cols-4 lg:gap-4 gap-2">
+                <div className="tours grid lg:grid-cols-12 md:grid-cols-9 sm:grid-cols-3 lg:gap-4 gap-2 container mx-auto new-service-container">
                     {
-                        services.map(x => <div key={x._id} className="card col-span-4 w- bg-base-100 shadow-xl">
-                            <figure><img src={x.data.url} alt="Paris" /></figure>
-                            <div className="card-body">
+                        services.map(x => <div key={x._id} className="card col-span-3 w- bg-base-100 shadow-xl">
+                            <div className='new-service-image-div'>
+                                <figure><img src={x.data.url} alt="Paris" /></figure>
+                            </div>
+                            <div className="card-bod new-service-info-div">
                                 <div className="card-title flex justify-between">
-                                    <h4>Name: {x.data.name} </h4>
+                                    <h4> {x.data.name} </h4>
                                 </div>
 
-                                <div className=' text-left'>
-                                    <h2> <FontAwesomeIcon icon={faDollar} /> Price  {x.data.price}</h2>
-                                </div>
+                                <div className='price-and-rating'>
+                                    <div className=' text-left'>
+                                        <h2> <FontAwesomeIcon icon={faDollar} /> Price  {x.data.price}</h2>
+                                    </div>
 
-                                <div className="rating flex items-center">
-                                    <p className=' text-left flex items-center rating-sm'> {x.data.ratings}
-                                        <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                                    </p>
+                                    <div className="rating flex items-center justify-between">
+                                        <p className=' text-left flex items-center rating-sm'> {x.data.ratings}
+                                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                                        </p>
 
-                                    <button onClick={navigateToPlaceOrderPage} className="btn btn-error">BUY NOW</button>
+                                        <button onClick={navigateToPlaceOrderPage} className="btn btn-error new-service-buy-now-btn">BUY NOW</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>)
@@ -527,40 +533,6 @@ const Home = () => {
                 </div>
             </div>
 
-
-
-
-            <div className="test p-16">
-                <h1 className=''>Hellllllllllo</h1>
-
-
-                <div style={{ position: 'relative', width: '100%' }}>
-                    <img src={exoatic4} alt="example image" style={{ width: '80%' }} />
-                    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0,200,0,0.5)' }}></div>
-                </div>
-
-                <div className='parent'>
-                    <div className="img-div-test">
-                        <img src={exoatic4} alt="" />
-                        <div className="overly-test"></div>
-                    </div>
-                    <div className="img-div-test">
-                        <img src={exoatic4} alt="" />
-                        <div className="overly-test"></div>
-                    </div>
-                    <div className="img-div-test">
-                        <img src={exoatic4} alt="" />
-                        <div className="overly-test"></div>
-                    </div>
-                    <div className="img-div-test">
-                        <img src={exoatic4} alt="" />
-                        <div className="overly-test"></div>
-                    </div>
-                </div>
-
-                <button className='btn animate__animated animate__jello'>TST</button>
-
-            </div>
 
         </div>
     );

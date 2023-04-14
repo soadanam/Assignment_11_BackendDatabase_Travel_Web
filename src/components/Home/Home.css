@@ -420,6 +420,51 @@
 
 
 
+/* ///// Travel accessories section  */
+.new-service {}
+
+.modern-trendy {
+    margin-top: 150px;
+    color: rgb(255, 81, 37);
+    font-size: 1.1rem;
+    font-family: 'reey';
+}
+
+.new-service-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(63, 63, 63);
+    padding-bottom: 50px;
+}
+
+.new-service .tours .card {
+    border-radius: 0%;
+    display: flex;
+    justify-content: space-between;
+
+    /* background-color: aquamarine; */
+    border: 1px solid rgba(194, 194, 194, 0.347);
+    box-shadow: 0px 8px 10px 0px rgba(179, 179, 179, 0.516);
+}
+
+.new-service .tours .card img {
+    /* background-color: red; */
+    /* width: 10%; */
+    color: rgb(77, 66, 66);
+    /* height: 250px; */
+}
+
+.new-service-info-div {
+    /* background-color: aqua; */
+    padding: 20px;
+}
+
+.new-service-buy-now-btn {
+    /* background-color: aqua; */
+    border: none;
+    background-color: rgb(255, 81, 37);
+    color: white;
+}
 
 
 

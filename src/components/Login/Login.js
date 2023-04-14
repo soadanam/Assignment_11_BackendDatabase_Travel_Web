@@ -1,4 +1,5 @@
 import React from 'react';
+import './Login.css';
 import { useNavigate, useLocation } from 'react-router-dom';
 import useAuth from './../../Hooks/useAuth';
 import { useState } from 'react';
@@ -29,10 +30,11 @@ const Login = () => {
     
 
     return (
-        <div className='bg-accent pt-14 pb-28'>
-            <h2>This is LOGIN section!</h2>
+        <div className='login-container container mx-auto bg-accent pt-36 pr-10 pb-48 text-right'>
+            <h2>Please Login to access 
+                <br /> the full content!</h2>
 
-            <button onClick={handleGoogleLoginAndRedirect} className="btn btn-secondary mt-4">LOGIN</button>
+            <button onClick={handleGoogleLoginAndRedirect} className="btn login-page-login-btn mt-4 animate__animated animate__zoomInDown  ">LOGIN</button>
 
         </div>
     );

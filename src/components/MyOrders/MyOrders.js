@@ -54,7 +54,7 @@ const MyOrders = () => {
             <h2>{myText}</h2>
             
             {setTimeout(() => {
-                setMyText('You have no orders!');
+                setMyText("You haven't made any order or logged in!");
             }, 3000)}
 
         </>)

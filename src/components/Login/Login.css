@@ -1,0 +1,14 @@
+.login-container {
+    /* background-color: antiquewhite; */
+    background-image: url('../../images/login/login.jpg');
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+
+}
+
+.login-page-login-btn {
+    background-color: rgba(234, 79, 40, 0.985);
+}

@@ -144,6 +144,11 @@
     font-weight: 500;
 }
 
+.find-now-btn:hover {
+    background-color: rgba(68, 17, 17, 0.743);
+    transition: 1s;
+}
+
 
 
 /* ///////go exotic places section  */
@@ -151,7 +156,7 @@
     color: rgb(255, 81, 37);
     font-size: 1.1rem;
     font-family: 'reey';
-    margin-top: 150px;
+    margin-top: 130px;
 }
 
 .go-exotic-place-title {
@@ -273,7 +278,7 @@
 
 /* ////// discount section  */
 .discount-section {
-    margin-top: 150px;
+    margin-top: 130px;
 }
 
 /* //left  */
@@ -346,11 +351,10 @@
 }
 
 .book-with-us-now-button {
-    background-color: rgba(238, 85, 46, 0.968);
+    background-color: rgb(246, 85, 44);
     color: white;
-    font-size: .8rem;
-    margin-top: 50px;
 }
+
 
 
 
@@ -358,7 +362,7 @@
 
 /* ///////most popular tours  */
 .featured-tours {
-    margin-top: 150px;
+    margin-top: 120px;
     color: rgb(255, 81, 37);
     font-size: 1.1rem;
     font-family: 'reey';
@@ -418,13 +422,95 @@
     color: rgb(71, 71, 71);
 }
 
+.most-popular-book-now-btn {
+    background-color: rgb(246, 85, 44);
+    color: white;
+    font-size: .8rem;
+    margin-top: 50px;
+    border: none;
+    color: white;
+}
+
+.most-popular-book-now-btn:hover {
+    background-color: rgba(243, 49, 0, 0.701);
+}
+
+
+
+/* // image effects  */
+
+* Circle */ .hover15 figure {
+    position: relative;
+}
+
+.hover15 figure::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, .2);
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.hover15 figure:hover::before {
+    -webkit-animation: circle .75s;
+    animation: circle .75s;
+}
+
+/* ////////  */
+
+
+
+@-webkit-keyframes circle {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+
+@keyframes circle {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+
+
+
 
 
 /* ///// Travel accessories section  */
-.new-service {}
+.new-service {
+    margin-bottom: 130px;
+}
 
 .modern-trendy {
-    margin-top: 150px;
+    margin-top: 130px;
     color: rgb(255, 81, 37);
     font-size: 1.1rem;
     font-family: 'reey';
@@ -434,7 +520,15 @@
     font-size: 2.5rem;
     font-weight: 700;
     color: rgb(63, 63, 63);
+}
+
+.note-for-adding-services {
     padding-bottom: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    font-style: italic;
+    color: rgb(21, 67, 206);
+
 }
 
 .new-service .tours .card {
@@ -466,6 +560,46 @@
     color: white;
 }
 
+
+/* ///// travel accessories image hover effect */
+/* Shine */
+.hover14 figure {
+    position: relative;
+}
+
+.hover14 figure::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+.hover14 figure:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+/* ////// */
 
 
 /* ///max width sec  */

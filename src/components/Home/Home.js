@@ -47,7 +47,7 @@ const Home = () => {
 
 
     const navigate = useNavigate();
-    ////Function to navigate Tour Details page.
+    ////Function to navigate Place Order page / details.
     const navigateToPlaceOrderPage = () => navigate('/PlaceOrder');
 
 
@@ -81,9 +81,6 @@ const Home = () => {
         // console.log("BB", zoomImage);
         zoomImage.classList.add('zoomed');
     };
-
-
-
 
 
 
@@ -248,7 +245,7 @@ const Home = () => {
                         <option value="adventure">Sightseeing</option>
                     </select>
                 </div>
-                <button className=' find-now-btn'>FIND NOW</button>
+                <button onClick={navigateToPlaceOrderPage} className=' find-now-btn animate__animated animate__bounce'>FIND NOW</button>
 
             </div>
 
@@ -267,7 +264,7 @@ const Home = () => {
                             <h2>Spain</h2>
                         </div>
                         <div className="gallery-image-overly">
-                            <button className='btn gallery-btn-tours animate__animated animate__flip'>6 Tours</button>
+                            <button className='btn gallery-btn-tours animate__animated animate__flip'>128 Tours</button>
                         </div>
                     </div>
                     <div className="gallery-image-div col-span-6 p-5">
@@ -276,7 +273,7 @@ const Home = () => {
                             <h2>Thailand</h2>
                         </div>
                         <div className="gallery-image-overly">
-                            <button className='btn gallery-btn-tours animate__animated animate__flip'>6 Tours</button>
+                            <button className='btn gallery-btn-tours animate__animated animate__flip'>32 Tours</button>
                         </div>
                     </div>
                     <div className="gallery-image-div col-span-3 p-5">
@@ -285,7 +282,7 @@ const Home = () => {
                             <h2>Africa</h2>
                         </div>
                         <div className="gallery-image-overly">
-                            <button className='btn gallery-btn-tours animate__animated animate__flip'>6 Tours</button>
+                            <button className='btn gallery-btn-tours animate__animated animate__flip'>256 Tours</button>
                         </div>
                     </div>
                     <div className="gallery-image-div col-span-6 p-5">
@@ -294,7 +291,7 @@ const Home = () => {
                             <h2>Australiz</h2>
                         </div>
                         <div className="gallery-image-overly">
-                            <button className='btn gallery-btn-tours animate__animated animate__flip'>6 Tours</button>
+                            <button className='btn gallery-btn-tours animate__animated animate__flip'>64 Tours</button>
                         </div>
                     </div>
                     <div className="gallery-image-div col-span-6 p-5">
@@ -303,7 +300,7 @@ const Home = () => {
                             <h2>Switzerland</h2>
                         </div>
                         <div className="gallery-image-overly">
-                            <button className='btn gallery-btn-tours animate__animated animate__flip'>6 Tours</button>
+                            <button className='btn gallery-btn-tours animate__animated animate__flip'>1024 Tours</button>
                         </div>
                     </div>
 
@@ -333,7 +330,7 @@ const Home = () => {
                     <h6> <FontAwesomeIcon className='discount-check-mark' icon={faSquareCheck} /> Support people in free text extreme need</h6>
                     <h6> <FontAwesomeIcon className='discount-check-mark' icon={faSquareCheck} /> Largest global industrial business community</h6>
 
-                    <button className="book-with-us-now-button btn btn-error">BOOK WITH US NOW</button>
+                    <button onClick={navigateToPlaceOrderPage} className="book-with-us-now-button btn btn-error">BOOK WITH US NOW</button>
                 </div>
             </div>
 
@@ -345,9 +342,9 @@ const Home = () => {
                 <h3 className='featured-tours'>Featured tours</h3>
                 <h2 className='most-popular-tours-title'>Most Popular Tours</h2>
 
-                <div className="tours most-popular-tours sm:grid lg:grid-cols-12 md:grid-cols-8 sm:grid-cols-4 lg:gap- gap-2">
+                <div className="tours most-popular-tours sm:grid lg:grid-cols-12 md:grid-cols-8 sm:grid-cols-4 lg:gap- gap-2 ">
 
-                    <div className="card col-span-4 w- shadow-xl">
+                    <div className="card col-span-4 w- shadow-xl hover15 column">
                         <figure><img src={popular1} alt="Paris" /></figure>
                         <div className="card-body">
                             <div className="card-title flex justify-between">
@@ -362,14 +359,13 @@ const Home = () => {
                             <div className="rating">
                                 <input type="radio" name="rating-2" className="mask mask-star-2 g-orange-400" />
 
-
                                 <p className=' text-left'> 45k+ Rating</p>
 
-                                <button onClick={navigateToPlaceOrderPage} className="btn btn-error">BOOK NOW</button>
+                                <button onClick={navigateToPlaceOrderPage} className="btn most-popular-book-now-btn">BOOK NOW</button>
                             </div>
                         </div>
                     </div>
-                    <div className="card col-span-4 w- bg-base-100 shadow-xl">
+                    <div className="card col-span-4 w- bg-base-100 shadow-xl hover15 column">
                         <figure><img src={popular2} alt="Lake" /></figure>
                         <div className="card-body">
                             <div className="card-title flex justify-between">
@@ -387,13 +383,13 @@ const Home = () => {
 
                                 <p className=' text-left'> 82k+ Rating</p>
 
-                                <button onClick={navigateToPlaceOrderPage} className="btn btn-error">BOOK NOW</button>
+                                <button onClick={navigateToPlaceOrderPage} className="btn most-popular-book-now-btn">BOOK NOW</button>
                             </div>
 
 
                         </div>
                     </div>
-                    <div className="card col-span-4 w- bg-base-100 shadow-xl">
+                    <div className="card col-span-4 w- bg-base-100 shadow-xl hover15 column">
                         <figure><img src={popular3} alt="Shoes" /></figure>
                         <div className="card-body">
                             <div className="card-title flex justify-between">
@@ -411,13 +407,13 @@ const Home = () => {
 
                                 <p className=' text-left'> 17k+ Rating</p>
 
-                                <button onClick={navigateToPlaceOrderPage} className="btn btn-error">BOOK NOW</button>
+                                <button onClick={navigateToPlaceOrderPage} className="btn most-popular-book-now-btn">BOOK NOW</button>
                             </div>
 
 
                         </div>
                     </div>
-                    <div className="card col-span-4 w- bg-base-100 shadow-xl">
+                    <div className="card col-span-4 w- bg-base-100 shadow-xl hover15 column">
                         <figure><img src={popular4} alt="Shoes" /></figure>
                         <div className="card-body">
                             <div className="card-title flex justify-between">
@@ -435,13 +431,13 @@ const Home = () => {
 
                                 <p className=' text-left'> 11k+ Rating</p>
 
-                                <button onClick={navigateToPlaceOrderPage} className="btn btn-error">BOOK NOW</button>
+                                <button onClick={navigateToPlaceOrderPage} className="btn most-popular-book-now-btn">BOOK NOW</button>
                             </div>
 
 
                         </div>
                     </div>
-                    <div className="card col-span-4 w- bg-base-100 shadow-xl">
+                    <div className="card col-span-4 w- bg-base-100 shadow-xl hover15 column">
                         <figure><img src={popular5} alt="Shoes" /></figure>
                         <div className="card-body">
                             <div className="card-title flex justify-between">
@@ -459,13 +455,13 @@ const Home = () => {
 
                                 <p className=' text-left'> 22k+ Rating</p>
 
-                                <button onClick={navigateToPlaceOrderPage} className="btn btn-error">BOOK NOW</button>
+                                <button onClick={navigateToPlaceOrderPage} className="btn most-popular-book-now-btn">BOOK NOW</button>
                             </div>
 
 
                         </div>
                     </div>
-                    <div className="card col-span-4 w- bg-base-100 shadow-xl">
+                    <div className="card col-span-4 w- bg-base-100 shadow-xl hover15 column">
                         <figure><img src={popular6} alt="Shoes" /></figure>
                         <div className="card-body">
                             <div className="card-title flex justify-between">
@@ -483,7 +479,7 @@ const Home = () => {
 
                                 <p className=' text-left'> 64k+ Rating</p>
 
-                                <button onClick={navigateToPlaceOrderPage} className="btn btn-error">BOOK NOW</button>
+                                <button onClick={navigateToPlaceOrderPage} className="btn most-popular-book-now-btn">BOOK NOW</button>
                             </div>
 
 
@@ -498,15 +494,16 @@ const Home = () => {
 
 
 
-            {/* Add a New Service - Section  */}
-            <div className="new-service mt-20 pt-5 container mx-auto">
+            {/* Add a New Service - Section / Travel Accessories  */}
+            <div className="new-service container mx-auto">
                 <h2 className='modern-trendy'>Modern & Trendy</h2>
                 <h2 className='new-service-title'>{services[1]?.data?.category} </h2>
+                <h5 className='note-for-adding-services'> [ Note: You can add your own products here by simply going to "Add A New Service" from the menu bar !! ] </h5>
 
                 <div className="tours grid lg:grid-cols-12 md:grid-cols-9 sm:grid-cols-3 lg:gap-4 gap-2 container mx-auto new-service-container">
                     {
                         services.map(x => <div key={x._id} className="card col-span-3 w- bg-base-100 shadow-xl">
-                            <div className='new-service-image-div'>
+                            <div className='new-service-image-div hover14 column'>
                                 <figure><img src={x.data.url} alt="Paris" /></figure>
                             </div>
                             <div className="card-bod new-service-info-div">

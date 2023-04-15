@@ -42,16 +42,16 @@ const Header = () => {
                     <div className="top-social-media text-cyan-100 flex ">
                         <div className="fb-twitter-instagram-pinterest text-red-">
                             <a href="#fb" className="fb ml-5">
-                                <i class="fa-brands fa-square-facebook"></i>
+                                <i className="fa-brands fa-square-facebook"></i>
                             </a>
                             <a href="#" className='ml-3'>
-                                <i class="fa-brands fa-square-twitter"></i>
+                                <i className="fa-brands fa-square-twitter"></i>
                             </a>
                             <a href="#" className='ml-3'>
-                                <i class="fa-brands fa-square-instagram"></i>
+                                <i className="fa-brands fa-square-instagram"></i>
                             </a>
                             <a href="#" className='ml-3 mr-7'>
-                                <i class="fa-brands fa-square-pinterest"></i>
+                                <i className="fa-brands fa-square-pinterest"></i>
                             </a>
                         </div>
                         <div className="become-a-guide bg-red- px-4 py-2.5">
@@ -73,16 +73,16 @@ const Header = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><a href='/'>Home</a></li>
                             <li tabIndex={0}>
-                                <a className="justify-between">
+                                <a className="justify-between sub-menu-1">
                                     Manage All Orders
                                     <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                                 </a>
-                                <ul className="p-2">
-                                    <li><a>My Orders</a></li>
-                                    <li><a>Add A New Service</a></li>
+                                <ul className="p-2 sub-menu-2">
+                                    <li><a href='/myOrders'>My Orders</a></li>
+                                    <li><a href='/AddAService'>Add A New Service</a></li>
                                 </ul>
                             </li>
-                            <li><a href='/PlaceOrder'>PlaceOr!</a></li>
+                            <li><a href='/PlaceOrder'>Place Orders</a></li>
                         </ul>
                     </div>
                     <a href='/' className="logo btn btn-ghost normal-case text-xl"> <img className='w-6' src={logo} alt="" /> Travelian</a>
@@ -115,7 +115,7 @@ const Header = () => {
 
                         {/* {user.email && <li><NavLink to='/manageAllOrders'>Manage All Orders</NavLink></li>} */}
 
-                        {/* {user.email && <li><NavLink to='/AddAService'>Add a Service</NavLink></li>} */}
+                        {user.email && <li><NavLink to='/AddAService'>Add A Service</NavLink></li>}
 
                         {user.email ? '' : <li><NavLink to='/login'>Login</NavLink></li>}
 
@@ -140,7 +140,7 @@ const Header = () => {
                     <div className="dropdown dropdown-end hidden sm:block">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                             <div className="rounded-full ">
-                                {user.email ? <img src={user.photoURL} /> : <i class="fa-regular fa-user"></i>}
+                                {user.email ? <img src={user.photoURL} /> : <i className="fa-regular fa-user"></i>}
                             </div>
                         </label>
 
@@ -148,7 +148,7 @@ const Header = () => {
                             <li>
                                 <a className="justify-between">
                                     {user.email ? "Profile" : "Guest"}
-                                    {user.email ? <span className="badge"><img className='dropdown-profile-photo' src={user.photoURL} /></span> : <i class="fa-solid fa-user"></i>}
+                                    {user.email ? <span className="badge"><img className='dropdown-profile-photo' src={user.photoURL} /></span> : <i className="fa-solid fa-user"></i>}
                                 </a>
                             </li>
                             <li>{user.email ? <a>Settings</a> : <a>Limited options available!</a>} </li>

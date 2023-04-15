@@ -57,6 +57,16 @@
     color: white;
 }
 
+
+.sub-menu-1 {
+    /* background-color: red; */
+}
+
+.sub-menu-2 {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(218, 218, 218, 0.575);
+}
+
 .logo {
     /* color: rgba(252, 92, 52, 0.835); */
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */

@@ -1,0 +1,39 @@
+.footer-container {
+    background-color: rgb(79, 66, 66);
+    /* color: red; */
+    color: rgb(180, 180, 180);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.footer-titles {
+    color: white;
+    z-index: 2;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer-login {
+    background-color: rgb(246, 85, 44);
+    border: none;
+}
+
+.footer-hash {
+    color: rgb(246, 85, 44);
+}
+
+.footer .items-center p {
+    font-style: italic;
+    color: rgb(59, 56, 56);
+    font-size: .9rem;
+    /* text-align: left; */
+}
+
+.footer-social-media-icon {
+    color: rgb(246, 85, 44);
+    cursor: pointer;
+}
+
+.footer-social-media-icon:hover {
+    color: rgb(46, 28, 255);
+}

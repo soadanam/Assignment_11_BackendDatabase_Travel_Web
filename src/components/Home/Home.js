@@ -3,7 +3,7 @@ import './Home.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBagShopping, faCocktail, faDollar, faEnvelope, faLocation, faLocationDot, faLocationPin, faSquareCheck } from '@fortawesome/free-solid-svg-icons'
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import 'animate.css';
 
 import banner1 from '../../images/banner/banner1.jpg'
@@ -95,6 +95,10 @@ const Home = () => {
             myElement.classList.add('my-class');
         }
     };
+
+
+    // Tab Name
+    document.title = "Travelian | Largest Tour Planner";
 
 
 

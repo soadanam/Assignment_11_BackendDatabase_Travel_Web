@@ -30,6 +30,9 @@ const Login = () => {
         });
     };
 
+    // Tab Name
+    document.title = "Login";
+
     
 
     return (

@@ -82,6 +82,12 @@ const ManageAllOrders = () => {
     };
 
 
+    // Tab Name
+    document.title = "Manage All Orders";
+
+
+
+
     return (
         <div className='container mx-auto all-orders-container g-green-200'>
             <h3>This is "Manage All Orders" Page! <br /> Showing data of all users. You can "Delete" of change its "Status" right here!</h3>

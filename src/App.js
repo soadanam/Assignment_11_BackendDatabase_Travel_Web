@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation, useParams } from 'react-router-dom';
 import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
 import Header from './components/Header/Header';
@@ -58,10 +58,10 @@ function App() {
           <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
-
-
+      
     </div>
   );
+
 }
 
 export default App;

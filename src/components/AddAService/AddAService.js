@@ -19,6 +19,10 @@ const AddAService = () => {
     // console.log(watch("example")); // watch input value by passing the name of it
 
 
+    // Tab Name
+    document.title = "Add New Services";
+
+
     return (
         <div className='container mx-auto pt-40 pb-40 service-container'>
 

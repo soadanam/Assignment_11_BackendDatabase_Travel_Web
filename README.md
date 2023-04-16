@@ -31,6 +31,8 @@ www.travelian.com
 9. The website uses a .env file to hide database user and password information and a .gitignore file to prevent sensitive information from being pushed to the repository.
 10. A meaningful readme.md file has been added that contains the website name, a little description, a link to the live site, and at least five bullet points highlighting the different features and functionalities of the website.
 
+    *Also Tab will change and display the name based on the webpage.
+
 
 
 ### Live link: 

@@ -59,6 +59,9 @@ const MyOrders = () => {
         </>)
     };
 
+    // Tab Name
+    document.title = "My Orders";
+
 
     return (
         <div className='container mx-auto my-orders-container'>

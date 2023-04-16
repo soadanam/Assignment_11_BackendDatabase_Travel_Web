@@ -29,6 +29,7 @@ import gallery13 from '../../images/gallery/gl-16.png';
 import gallery14 from '../../images/gallery/gl-17.png';
 import gallery15 from '../../images/gallery/g-xl-4.png';
 import gallery16 from '../../images/gallery/g-xxl-4.png';
+import { useLocation, useParams } from 'react-router-dom';
 
 
 
@@ -72,6 +73,8 @@ const PlaceOrder = () => {
     // console.log("NN::", user.email)
 
 
+    // Tab Name
+    document.title = "Place Order";
 
     return (
         <div className='place-order-container pb-20 g-green-500 '>

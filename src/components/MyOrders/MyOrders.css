@@ -1,8 +1,28 @@
+.my-orders-loading, .processing-btn {
+    font-size: 2rem;
+    color: rgb(255, 98, 0);
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+
+.my-orders-container h3 {
+    font-weight: 600;
+    font-size: 2rem;
+
+}
+
+.my-orders-container h2 {
+    font-weight: 600;
+    font-size: 1rem;
+    font-style: italic;
+
+}
+
 .orders {
-    background-color: rgb(171, 234, 255);
+    background-color: rgb(160, 231, 255);
     border-radius: 20px;
 
     margin: 20px;
-    border: 10px solid rgb(219, 5, 130);
+    border: 10px solid rgb(18, 64, 139);
     padding: 30px;
 }

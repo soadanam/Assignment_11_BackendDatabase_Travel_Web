@@ -1,6 +1,5 @@
-/* google fonts DM sans  */
+/* google fonts DM sans and other */
 @import url('https://fonts.googleapis.com/css2?family=Autour+One&family=DM+Serif+Display:ital@0;1&family=Inspiration&family=Roboto:ital,wght@1,300&family=Tourney:ital,wght@0,500;0,600;1,400&display=swap');
-
 
 @import url('https://fonts.googleapis.com/css2?family=Autour+One&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=DM+Serif+Display:ital@0;1&family=Inspiration&family=Roboto:ital,wght@1,300&family=Tourney:ital,wght@0,500;0,600;1,400&display=swap');
 
@@ -17,9 +16,6 @@
 
 
 /* ///////////////// */
-
-
-
 .contact-container {
     background-color: rgb(59, 46, 46);
 }
@@ -46,8 +42,18 @@
     align-items: center;
 }
 
-.fb-twitter-instagram-pinterest a>i {
+/* .fb-twitter-instagram-pinterest a i {
     color: rgba(255, 81, 37, 0.743);
+    color: rgb(255, 255, 255);
+    color: rgb(97, 76, 72);
+    background-color: rgb(254, 98, 59, 0.887);
+} */
+
+.fb-twitter-instagram-pinterest a i {
+    color: rgb(255, 101, 44);
+}
+
+.fb-twitter-instagram-pinterest a i:hover {
     color: rgb(255, 255, 255);
 }
 
@@ -104,7 +110,6 @@
     /* background-color: aqua; */
     max-width: 80px;
     border: 1px solid rgb(190, 190, 190);
-
 }
 
 .nav-logout-btn:hover {
@@ -132,6 +137,12 @@
     border-radius: 50%;
 }
 
+.dorp-down-menu-2 {
+    /* background-color: aquamarine; */
+    /* background-color: aqua; */
+    color: white;
+    z-index: 50;
+}
 
 
 

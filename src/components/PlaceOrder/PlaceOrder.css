@@ -16,5 +16,263 @@
 
 .accordion-content {
     display: none;
+    padding: 0px 10px;
+}
+
+
+/*////// Name, duration, location section */
+.name-duration-location-section {
+    /* background-color: red; */
+    margin-top: 50px;
+    margin-bottom: 50px;
     padding: 10px;
+}
+
+.name-duration-location-section .icon {
+    color: rgb(255, 81, 37);
+    padding-right: 5px;
+}
+
+.name-duration-location-section .name-details-left h2 {
+    font-size: 2rem;
+    font-style: italic;
+    color: rgb(61, 61, 61);
+    font-weight: 600;
+}
+
+.name-duration-location-section .name-details-left h3 {
+    font-weight: 600;
+}
+
+.duration-location-right p, h6 {
+    /* background-color: rgb(237, 170, 170); */
+    line-height: 1;
+    padding: 0px 10px 0px 5px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: .8rem;
+}
+
+.duration-location-right .icon {}
+
+
+/* ///////// share-section  */
+.share-container {
+    margin-bottom: 50px;
+    /* background-color: rgb(184, 179, 179); */
+    border-radius: 10px;
+    border: 1px solid rgba(194, 194, 194, 0.558);
+}
+
+.share-left i {
+    color: rgb(255, 81, 37);
+    padding-right: 10px;
+    font-size: 1.5rem;
+    padding-left: 5px;
+}
+
+.posted p {
+    color: rgb(94, 94, 94);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.share-left .ratings {
+    font-size: .9rem;
+    /* background-color: red; */
+    color: rgb(60, 60, 60);
+    font-weight: 600;
+}
+
+.share-right .share-btn {
+    background-color: rgb(255, 81, 37);
+    border: none;
+}
+
+
+
+/* ///// Overview section  */
+.overview-section {
+    /* background-color: rgba(141, 124, 124, 0); */
+}
+
+.overview-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.overview-section p {
+    /* background-color: red; */
+    font-size: 1rem;
+    color: rgb(79, 78, 78);
+    font-style: italic;
+}
+
+.parkImage {
+    max-height: 500px !important;
+}
+
+
+
+
+
+/* /// include exclude section   */
+.include-exclude-section {
+    /* background-color: antiquewhite; */
+    background-image: url('../../images/include/include.jpg');
+    margin-top: 110px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 400px;
+    border-radius: 20px;
+}
+
+.include-exclude-section .content {}
+
+.include-exclude-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: rgb(65, 64, 64);
+}
+
+.tick {
+    color: rgb(255, 51, 0);
+    padding-right: 15px;
+}
+
+.include-left {
+    margin-bottom: 50px;
+}
+
+.include-left p {
+    color: rgb(71, 67, 67);
+    font-weight: 600;
+    font-size: .9rem;
+
+    background-color: rgba(240, 248, 255, 0.211);
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.include-right {
+    margin-bottom: 50px;
+}
+
+.include-right p {
+    /* background-color: #f1f1f1; */
+    color: rgb(71, 67, 67);
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: rgba(240, 248, 255, 0.314);
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 20px;
+}
+
+.include-right .cross {
+    padding-right: 15px;
+    color: rgb(255, 51, 0);
+}
+
+
+
+
+/* ///////highlight section   */
+
+.highlight-section {
+    background-color: rgba(127, 255, 212, 0.798);
+    border-radius: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 2px solid rgb(95, 211, 173);
+}
+
+.highlight-section h2 {
+    color: rgb(74, 71, 71);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.highlight-section div p {
+    /* color: rebeccapurple; */
+    font-size: 1rem;
+    color: rgb(60, 60, 60);
+    font-weight: 600;
+}
+
+.highlight-section div i {
+    color: rgb(255, 81, 37);
+    font-size: 1.1rem;
+    /* background-color: red; */
+}
+
+
+
+
+
+/* gallery section  */
+.gallery-section {
+    /* background-color: rgba(123, 207, 207, 0.47); */
+    margin-bottom: 100px;
+}
+
+.gallery-section h2 {
+    font-size: 2rem;
+    color: rgb(61, 61, 61);
+    font-weight: 600;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.gallery-section {
+    max-width: 900px;
+    /* background-color: red; */
+}
+
+.details-images {
+    max-width: 900px;
+}
+
+
+
+
+
+/* ////// booking-form  */
+.booking-form {
+    background-color: rgba(127, 255, 212, 0.432);
+    background-image: url('../../images/booking/booking1.jpg');
+    border-radius: 20px;
+}
+
+.booking-form h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: left;
+    color: rgb(33, 33, 33);
+    padding: 10px 0px 30px 20px;
+}
+
+
+.booking-form form input, .travel-with {
+    background-color: red;
+    border: 3px solid rgba(2, 123, 166, 0.408);
+    border: 3px solid rgba(0, 80, 109, 0.668);
+    background-color: rgb(216, 244, 255);
+    border-radius: 10px;
+    padding: 12px 10px;
+    font-size: .9rem;
+    box-shadow: inset 10px 10px 10px rgb(147, 166, 173);
+}
+
+.place-order-book-now-btn {
+    background-color: rgb(255, 81, 37);
+    border: none;
+    margin-bottom: 95px;
 }

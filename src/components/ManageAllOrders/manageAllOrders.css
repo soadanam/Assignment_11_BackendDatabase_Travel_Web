@@ -1,0 +1,21 @@
+.all-orders-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.all-orders-container h3 {
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+}
+
+.all-orders-div {
+    background-color: rgba(255, 72, 6, 0.16);
+    border-radius: 20px;
+    margin: 20px;
+    font-style: italic;
+}

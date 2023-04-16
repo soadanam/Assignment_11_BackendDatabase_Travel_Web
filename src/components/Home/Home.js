@@ -6,6 +6,10 @@ import { faBagShopping, faCocktail, faDollar, faEnvelope, faLocation, faLocation
 import { useNavigate } from 'react-router-dom';
 import 'animate.css';
 
+import banner1 from '../../images/banner/banner1.jpg'
+import banner2 from '../../images/banner/banner2.jpg'
+import banner3 from '../../images/banner/banner3.jpg'
+
 import exoatic1 from '../../images/exotic/destination-1-1.f32b89c3.png';
 import exoatic2 from '../../images/exotic/destination-1-2.6b007ca8.png';
 import exoatic3 from '../../images/exotic/destination-1-3.d37d50e6.png';
@@ -21,17 +25,18 @@ import popular4 from '../../images/popular/p-4.png';
 import popular5 from '../../images/popular/p-5.png';
 import popular6 from '../../images/popular/p-6.png';
 
-
-
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 
 
+
+
+
 const Home = () => {
+
     const [packages, setPackages] = useState([]);
     // console.log("STATE ??", packages)
-
 
     ////Loading data from Backend (mongodb) by Fetching
     const url = 'http://localhost:7777/packages';
@@ -45,11 +50,9 @@ const Home = () => {
     }, [url]);
 
 
-
     const navigate = useNavigate();
     ////Function to navigate Place Order page / details.
     const navigateToPlaceOrderPage = () => navigate('/PlaceOrder');
-
 
 
     //// Loading Services from mongodb
@@ -67,10 +70,8 @@ const Home = () => {
     }, []);
 
 
-
     // react datepicker's state
     const [startDate, setStartDate] = useState(new Date());
-
 
 
     const addClassToSliderImage = (myClass) => {
@@ -83,8 +84,7 @@ const Home = () => {
     };
 
 
-
-
+    //a function to add a class to an element
     const myElement = document.querySelector('.my-element');
     const myClassAddFunction = () => {
         console.log("Clicked")
@@ -99,23 +99,18 @@ const Home = () => {
 
 
     return (
-        <div className=''>
-
-            {/* <button id='my-button' onClick={myClassAddFunction} className='btn my-button'> click to make h</button>
-            <div id="my-element" className='my-element'>HEY Buddy!</div> */}
-
-
+        <div className='main-container'>
 
             {/* flowBite carousel  */}
             <div className="sliding">
 
-                <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                <div id="default-carousel" className="relative w-full" data-carousel="slide">
                     {/* <!-- Carousel wrapper --> */}
-                    <div class="relative h-24 sm:h-48 md:h-56 overflow-hidden rounded-lg lg:h- flowbite-carousel-content-container ">
+                    <div className="relative h-24 sm:h-48 md:h-56 overflow-hidden rounded-lg lg:h- flowbite-carousel-content-container ">
 
                         {/* <!-- Item 1 --> */}
-                        <div class="hidden duration-5000 ease-in-out item item-1" data-carousel-item>
-                            <img src="https://tevily-nextjs.vercel.app/_next/static/media/main-slider-1-1.62fecf08.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 image image-1" />
+                        <div className="hidden duration-5000 ease-in-out item item-1" data-carousel-item>
+                            <img src={banner1} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 image image-1" />
                             <div className='carousel-img-overlay'></div>
                             {/* banner text  */}
                             <div style={{ fontSize: "clamp(.5rem, 4vw, 6rem)" }} className="banner-title">
@@ -124,8 +119,8 @@ const Home = () => {
                             </div>
                         </div>
                         {/* <!-- Item 2 --> */}
-                        <div class="hidden duration-5000 ease-in-out item item-2" data-carousel-item>
-                            <img src="https://tevily-nextjs.vercel.app/_next/static/media/main-slider-1-2.4865c85b.jpg" className=" absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 image image-2" />
+                        <div className="hidden duration-5000 ease-in-out item item-2" data-carousel-item>
+                            <img src={banner2} className=" absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 image image-2" />
                             <div className='carousel-img-overlay'></div>
                             {/* banner text  */}
                             <div style={{ fontSize: "clamp(.5rem, 4vw, 6rem)" }} className="banner-title">
@@ -134,9 +129,9 @@ const Home = () => {
                             </div>
                         </div>
                         {/* <!-- Item 3 --> */}
-                        <div class="hidden duration-5000 ease-in-out item item-3" data-carousel-item>
+                        <div className="hidden duration-5000 ease-in-out item item-3" data-carousel-item>
                             {/* <img src="https://tevily-nextjs.vercel.app/_next/static/media/main-slider-1-3.fe6aff2e.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 image image-3" /> */}
-                            <img src="https://tevily-nextjs.vercel.app/_next/static/media/main-slider-1-3.fe6aff2e.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 image image-3" />
+                            <img src={banner3} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 image image-3" />
                             <div className='carousel-img-overlay'></div>
                             <div style={{ fontSize: "clamp(.5rem, 4vw, 6rem)" }} className="banner-title">
                                 <h2 className='travelAdventures   animate__animated animate__fadeInDown'>Travel & Adventures</h2>
@@ -153,31 +148,29 @@ const Home = () => {
                         <h5 style={{ fontSize: "clamp(.5rem, 2vw, 4rem)" }} className='whereWould animate__animated animate__fadeInUp'>Where Would You Like To Go?</h5>
                     </div>
                     {/* <!-- Slider indicators --> */}
-                    <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2 indicator">
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                    <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2 indicator">
+                        <button type="button" className="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                        <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                        <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
 
                     </div>
                     {/* <!-- Slider controls --> */}
-                    <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                            <span class="sr-only">Previous</span>
+                    <button type="button" className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg aria-hidden="true" className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
+                            <span className="sr-only">Previous</span>
                         </span>
                     </button>
-                    <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                            <span class="sr-only">Next</span>
+                    <button type="button" className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg aria-hidden="true" className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                            <span className="sr-only">Next</span>
                         </span>
                     </button>
 
                 </div>
 
             </div>
-
-
 
 
             {/* Carousel - 2 */}
@@ -225,8 +218,6 @@ const Home = () => {
             </div>
 
 
-
-
             {/* Find_Now Section */}
             <div className='find-now-section my-12 container mx-auto'>
                 <div className="where">
@@ -239,7 +230,7 @@ const Home = () => {
                 </div>
                 <div className="type">
                     <p>Type</p>
-                    <select className='find-now-common' name="Adventure" id="">
+                    <select className='find-now-common adventure' name="Adventure" id="">
                         <option value="adventure">Adventure</option>
                         <option value="adventure">Wildlife</option>
                         <option value="adventure">Sightseeing</option>
@@ -248,7 +239,6 @@ const Home = () => {
                 <button onClick={navigateToPlaceOrderPage} className=' find-now-btn animate__animated animate__bounce'>FIND NOW</button>
 
             </div>
-
 
 
             {/* Gallery section  */}
@@ -308,7 +298,6 @@ const Home = () => {
             </div>
 
 
-
             {/* Discount Section  */}
 
             <div className="discount-section lg:grid grid-cols-12 grid-rows-0 container mx-auto">
@@ -333,8 +322,6 @@ const Home = () => {
                     <button onClick={navigateToPlaceOrderPage} className="book-with-us-now-button btn btn-error">BOOK WITH US NOW</button>
                 </div>
             </div>
-
-
 
 
             {/* Most Popular Tours section  */}
@@ -449,16 +436,11 @@ const Home = () => {
                             <div className=' text-left'>
                                 <h2> <FontAwesomeIcon className='popular-location-icon' icon={faLocationDot} /> Lido Beach, London</h2>
                             </div>
-
                             <div className="rating">
                                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-
                                 <p className=' text-left'> 22k+ Rating</p>
-
                                 <button onClick={navigateToPlaceOrderPage} className="btn most-popular-book-now-btn">BOOK NOW</button>
                             </div>
-
-
                         </div>
                     </div>
                     <div className="card col-span-4 w- bg-base-100 shadow-xl hover15 column">
@@ -469,29 +451,18 @@ const Home = () => {
                                 {/* <div className="badge badge-secondary">NEW</div> */}
                                 <h4>2 Days/1 night</h4>
                             </div>
-
                             <div className=' text-left'>
                                 <h2> <FontAwesomeIcon className='popular-location-icon' icon={faLocationDot} /> Sajek Tour, Bangladesh</h2>
                             </div>
-
                             <div className="rating">
                                 <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-
                                 <p className=' text-left'> 64k+ Rating</p>
-
                                 <button onClick={navigateToPlaceOrderPage} className="btn most-popular-book-now-btn">BOOK NOW</button>
                             </div>
-
-
                         </div>
                     </div>
-
                 </div>
             </div>
-
-
-
-
 
 
             {/* Add a New Service - Section / Travel Accessories  */}
@@ -520,7 +491,6 @@ const Home = () => {
                                         <p className=' text-left flex items-center rating-sm'> {x.data.ratings}
                                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                                         </p>
-
                                         <button onClick={navigateToPlaceOrderPage} className="btn btn-error new-service-buy-now-btn">BUY NOW</button>
                                     </div>
                                 </div>
@@ -529,7 +499,6 @@ const Home = () => {
                     }
                 </div>
             </div>
-
 
         </div>
     );

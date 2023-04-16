@@ -1,0 +1,39 @@
+.service-container {
+    /* background-color: antiquewhite; */
+    background-image: url('../../images/newServiceBack/newServiceBack4.png');
+    /* color: firebrick; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    margin-bottom: 90px;
+}
+
+.service-container form {}
+
+.service-container form input {
+    background-color: red;
+    border: 3px solid rgba(2, 123, 166, 0.408);
+    border: 3px solid rgba(0, 80, 109, 0.668);
+    background-color: rgb(216, 244, 255);
+    border-radius: 10px;
+    padding: 12px 10px;
+    font-size: .9rem;
+    box-shadow: inset 10px 10px 10px rgb(147, 166, 173);
+}
+
+.service-required-text {
+    color: rgb(255, 0, 0);
+    color: rgb(46, 255, 57);
+    font-size: .8rem;
+    font-style: italic;
+}
+
+.service-container h4 {
+    color: white;
+    font-style: italic;
+}
+
+.add-new-service-add-new-btn {
+    background-color: rgb(255, 81, 37);
+}

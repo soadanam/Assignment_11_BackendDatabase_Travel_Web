@@ -4,13 +4,16 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import useAuth from './../../Hooks/useAuth';
 import { useState } from 'react';
 
+
+
+
 const Login = () => {
+
     const {googleSignIn} = useAuth();
 
     const navigate = useNavigate();
     const location = useLocation(); // To read if the login page is redirected from any specific  page or not!
     const redirect_uri = location?.state?.from?.pathname || '/';
-
 
     const [errorMessage, setErrorMessage] = useState();
     

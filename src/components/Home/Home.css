@@ -149,6 +149,13 @@
     transition: 1s;
 }
 
+.adventure {
+    background-color: rgb(255, 255, 255);
+}
+
+.adventure option {
+    background-color: rgb(255, 81, 37);
+}
 
 
 /* ///////go exotic places section  */
@@ -247,11 +254,16 @@
 .gallery-image-bottom-left-text {
     position: absolute;
     /* font-size: 30px; */
-    font-size: 2.2rem;
+    font-size: 1rem !important;
     color: white;
     font-weight: 700;
-    bottom: 50px;
+    bottom: -20px;
     left: 50px;
+}
+
+.gallery-image-div h2 {
+    color: aliceblue !important;
+    font-size: 1.2rem !important;
 }
 
 
@@ -499,7 +511,6 @@
         opacity: 0;
     }
 }
-
 
 
 

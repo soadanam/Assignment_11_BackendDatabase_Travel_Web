@@ -1,4 +1,5 @@
 import axios from 'axios';
+import './manageAllOrders.css';
 import React, { useEffect, useState } from 'react';
 import MyOrders from '../MyOrders/MyOrders';
 
@@ -38,9 +39,7 @@ const ManageAllOrders = () => {
 
     // UPDATE API - "To approve"
     const handleUpdatePendingStatus = (id) => {
-
         const data = { status: 'Approved!' };
-
         fetch(`http://localhost:7777/updateStatus/${id}`, {
             method: 'PATCH',  //'PUT'
             headers: {
@@ -84,11 +83,11 @@ const ManageAllOrders = () => {
 
 
     return (
-        <div className='container mx-auto bg-green-200'>
-            <h2>This is Manage All Orders Page!</h2>
+        <div className='container mx-auto all-orders-container g-green-200'>
+            <h3>This is "Manage All Orders" Page! <br /> Showing data of all users. You can "Delete" of change its "Status" right here!</h3>
 
             {
-                allOrders.map(x => <div key={x._id}>
+                allOrders.map(x => <div className='all-orders-div' key={x._id}>
                     <h2>Name: {x.name}</h2>
                     <h2>Email: {x.email} </h2>
                     <h2>Ticket: {x.ticket} </h2>
@@ -103,7 +102,6 @@ const ManageAllOrders = () => {
                     </h2>
 
                     <h2>ID: {x._id} </h2>
-
                     <button className="btn btn-error" onClick={() => handleDeleteOrder(x._id)}> Delete </button>
 
                 </div>)

@@ -1,9 +1,18 @@
+.footer-main {
+    background-color: rgb(52, 45, 71);
+}
+
 .footer-container {
-    background-color: rgb(79, 66, 66);
     /* color: red; */
     color: rgb(180, 180, 180);
     font-weight: 600;
     font-size: 1rem;
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+    /* display: flex; */
+    /* justify-content: space-around; */
+    justify-content: space-between;
 }
 
 .footer-titles {
@@ -11,6 +20,11 @@
     z-index: 2;
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+.footer-subscribe-btm {
+    background-color: rgb(246, 85, 44);
+    border: none;
 }
 
 .footer-login {

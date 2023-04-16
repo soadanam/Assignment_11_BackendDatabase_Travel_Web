@@ -1,4 +1,5 @@
 import React from 'react';
+import './AddAService.css';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 
@@ -9,52 +10,42 @@ const AddAService = () => {
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         // console.log("Add service form DATA:", data);
-
         axios.post('http://localhost:7777/addNewService', {
             data: data
         });
 
         reset();
-
     };
-    console.log(watch("example")); // watch input value by passing the name of it
-
-
+    // console.log(watch("example")); // watch input value by passing the name of it
 
 
     return (
-        <div>
-            {/* This is add a service page!
-
-            Category: Travel Accessories
-
-            Image: url
-            Name: Large Suitcase
-            Rating: 4.5 star
-            Price: $ 108 */}
-
+        <div className='container mx-auto pt-40 pb-40 service-container'>
 
             {/* Add a new service - react hook form  */}
             <form onSubmit={handleSubmit(onSubmit)}>
 
-                <input value="Travel Accessories" {...register("category")} />
+                {/* <input value="Travel Accessories" {...register("category")} /> */}
 
-                <input defaultValue="https://detour.hibootstrap.com/images/product/product-1.jpg" {...register("url")} />
+                <h4>Service Name: </h4>
+                <input placeholder="Accessories name" {...register("name", { required: true })} /> <br />
+                {errors.name && <span className='service-required-text'>*This field is required!</span>}
 
-                <input placeholder="Accessories name" {...register("name", { required: true })} />
+                <h4>Price:</h4>
+                <input placeholder='price' {...register("price", { required: true })} /> <br />
+                {errors.price && <span className='service-required-text'>*This field is required!</span>}
 
-                {errors.name && <span>This field is required!</span>}
-                <input placeholder="Ratings" {...register("ratings")} />
+                <h4>Ratings: </h4>
+                <input placeholder="Ratings" {...register("ratings", {required: true})} /> <br />
+                {errors.ratings && <span className='service-required-text'>*This field is required!</span>}
 
-                <input placeholder='price' {...register("price", { required: true })} />
-
-                {/* include validation with required or other standard HTML validation rules */}
-                {/* <input {...register("exampleRequired", { required: true })} /> */}
-                {/* errors will return when field validation fails  */}
-                {/* {errors.exampleRequired && <span>This field is required</span>} */}
+                <h4>Add Image URL:</h4>
+                <input defaultValue="https://image.made-in-china.com/2f0j00nMdlyphrrIcf/New-PP-Luggage-From-Bubule-Factory.jpg" {...register("url", {required: true})} /> <br />
+                {errors.url && <span className='service-required-text'> *This field is required!</span>}
+                <br /><br />
 
                 {/* <input type="submit" /> */}
-                <button className="btn btn-accent">SUBMIT</button>
+                <button className="btn btn-accen add-new-service-add-new-btn">Add NEW Service</button>
             </form>
 
         </div>

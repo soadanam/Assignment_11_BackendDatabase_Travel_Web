@@ -7,12 +7,13 @@ import useFirebase from './../../Hooks/useFirebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../images/logo/logo1.png';
 
+
+
+
 const Header = () => {
 
     const { user, googleSignIn, signOutAll } = useFirebase();
     // console.log("USER:", user);
-    // console.log("USER img:", user.photoURL);
-    // const {} = useFirebase();
 
     const handleGoogleSignIn = () => {
         googleSignIn();
@@ -22,6 +23,9 @@ const Header = () => {
         signOutAll();
     }
 
+    const refreshHome = () => {
+        window.reload();
+    }
 
 
     return (
@@ -44,13 +48,13 @@ const Header = () => {
                             <a href="#fb" className="fb ml-5">
                                 <i className="fa-brands fa-square-facebook"></i>
                             </a>
-                            <a href="#" className='ml-3'>
+                            <a href="#twitter" className='ml-3'>
                                 <i className="fa-brands fa-square-twitter"></i>
                             </a>
-                            <a href="#" className='ml-3'>
+                            <a href="instagram" className='ml-3'>
                                 <i className="fa-brands fa-square-instagram"></i>
                             </a>
-                            <a href="#" className='ml-3 mr-7'>
+                            <a href="pinterest" className='ml-3 mr-7'>
                                 <i className="fa-brands fa-square-pinterest"></i>
                             </a>
                         </div>
@@ -79,7 +83,8 @@ const Header = () => {
                                 </a>
                                 <ul className="p-2 sub-menu-2">
                                     <li><a href='/myOrders'>My Orders</a></li>
-                                    <li><a href='/AddAService'>Add A New Service</a></li>
+                                    <li><a href='/manageAllOrders'>All Orders</a></li>
+                                    <li><a href='/AddAService'>Add New Service</a></li>
                                 </ul>
                             </li>
                             <li><a href='/PlaceOrder'>Place Orders</a></li>
@@ -92,9 +97,7 @@ const Header = () => {
                 {/* simple menubar  */}
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li> <a href='/'>Home</a>  </li>
-
-
+                        <li> <NavLink onClick={refreshHome} to='/'>Home</NavLink>  </li>
 
                         <li><NavLink to='/PlaceOrder'>Place Order</NavLink></li>
 
@@ -103,10 +106,10 @@ const Header = () => {
                                 All Orders
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                             </a>
-                            <ul className="p-2">
+                            <ul className="p-2 dorp-down-menu-2">
                                 <li><NavLink to='/myOrders'>My Orders</NavLink></li>
-                                <li><NavLink to='/AddAService'>Add A New Service</NavLink></li>
                                 <li><NavLink to='/manageAllOrders'>Manage All Orders</NavLink></li>
+                                <li><NavLink to='/AddAService'>Add A New Service</NavLink></li>
                             </ul>
                         </li>
 
@@ -158,7 +161,6 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };

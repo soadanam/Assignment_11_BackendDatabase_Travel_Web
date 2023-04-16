@@ -449,9 +449,8 @@
 
 
 
-/* // image effects  */
-
-* Circle */ .hover15 figure {
+/* // image effects  // circle effect */
+.hover15 figure {
     position: relative;
 }
 

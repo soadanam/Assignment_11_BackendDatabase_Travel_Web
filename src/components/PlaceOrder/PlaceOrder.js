@@ -8,7 +8,7 @@ import axios from 'axios';
 // import { MongoClient } from "mongodb";
 import useAuth from '../../Hooks/useAuth';
 
-import park1 from '../../images/park/park3 - Copy.jpg';
+import park1 from '../../images/park/park3.jpg';
 import park2 from '../../images/park/park1.jpg';
 import park3 from '../../images/park/park4.jpg';
 import park4 from '../../images/park/park5.jpg';

@@ -34,5 +34,11 @@ www.travelian.com
     *Also Tab will change and display the name based on the webpage.
 
 
+## StactOverflow Question
+1.  https://stackoverflow.com/questions/76030748/how-to-set-make-different-tab-title-based-on-the-routes-pages-in-react-js
+
+2. How to set/make "Different Tab Title" based on the Routes/Pages in React JS
+https://stackoverflow.com/q/76030748/18263860?sem=2
+
 
 ### Live link: 

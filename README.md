@@ -17,4 +17,20 @@ www.travelian.com
 
 6. Finally, all data will be stored in a NoSQL database such as MongoDB Atlas to ensure data security and scalability
 
+
+
+# FOR BONUS 
+
+1. I've added a Manage All Orders page where the admin can view and delete all orders placed by users. A confirmation message will appear before deletion.
+2. An Add A New Service page has been added for the admin to add new services that will appear on the home page. An image URL can be inputted for each service.
+3. Each order placed will have a default status of "pending" and the admin can update the status to "approved" on the Manage All Orders page with a simple button.
+4. The website has a meaningful name and consistent look and feel with relevant content and images.
+5. The code is clean and organized with components and comments when needed.
+6. A loading spinner has been added to the home page when data is loading.
+8. The website is responsive and optimized for desktop and mobile devices. Tablet responsiveness is optional.
+9. The website uses a .env file to hide database user and password information and a .gitignore file to prevent sensitive information from being pushed to the repository.
+10. A meaningful readme.md file has been added that contains the website name, a little description, a link to the live site, and at least five bullet points highlighting the different features and functionalities of the website.
+
+
+
 ### Live link: 

@@ -20,7 +20,7 @@ const MyOrders = () => {
     useEffect(() => {
         if (user.email) {
             // console.log("Found:", user.email)
-            fetch(`http://localhost:7777/forSpecificEmail/${user.email}`)
+            fetch(`https://tour-server-iota.vercel.app/forSpecificEmail/${user.email}`)
                 .then(res => res.json())
                 .then(data => {
                     setMyOrders(data);
@@ -34,7 +34,7 @@ const MyOrders = () => {
         if (window.confirm('Are you sure you want to delete this item?')) {
             axios({
                 method: 'DELETE',
-                url: `http://localhost:7777/deleteOrder/${id}`,
+                url: `https://tour-server-iota.vercel.app/deleteOrder/${id}`,
             })
                 .then(function (response) {
                     // console.log("response::", response)

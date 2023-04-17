@@ -43,7 +43,7 @@ const PlaceOrder = () => {
         console.log("Data::", myData)
 
         // POST API Call - fetch  
-        fetch('http://localhost:7777/pack', {
+        fetch('https://tour-server-iota.vercel.app/pack', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const PlaceOrder = () => {
         //POST API CALL - by AXIOS
         /* axios({
             method: 'post',
-            url: 'http://localhost:7777/pack',
+            url: 'https://tour-server-iota.vercel.app/pack',
             data: myData,
           }); */
     };

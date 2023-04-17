@@ -12,7 +12,7 @@ const ManageAllOrders = () => {
 
     //Fetching data by - calling GET API
     useEffect(() => {
-        fetch('http://localhost:7777/manageAllOrders')
+        fetch('https://tour-server-iota.vercel.app/manageAllOrders')
             .then(res => res.json())
             .then(data => {
                 // console.log('manage Or:', data);
@@ -26,7 +26,7 @@ const ManageAllOrders = () => {
         if (window.confirm('Are you sure you want to delete this item?')) {
             axios({
                 method: 'DELETE',
-                url: `http://localhost:7777/deleteOrder/${id}`,
+                url: `https://tour-server-iota.vercel.app/deleteOrder/${id}`,
             })
                 .then(function (res) {
                     alert("Successfully Deleted!");
@@ -40,7 +40,7 @@ const ManageAllOrders = () => {
     // UPDATE API - "To approve"
     const handleUpdatePendingStatus = (id) => {
         const data = { status: 'Approved!' };
-        fetch(`http://localhost:7777/updateStatus/${id}`, {
+        fetch(`https://tour-server-iota.vercel.app/updateStatus/${id}`, {
             method: 'PATCH',  //'PUT'
             headers: {
                 "Content-Type": "application/json",
@@ -49,7 +49,7 @@ const ManageAllOrders = () => {
         })
             .then(res => res.json())
             .then(data => {
-                fetch('http://localhost:7777/manageAllOrders')
+                fetch('https://tour-server-iota.vercel.app/manageAllOrders')
                     .then(res => res.json())
                     .then(data => {
                         // console.log('manage Or:', data);
@@ -63,7 +63,7 @@ const ManageAllOrders = () => {
 
         const data = { status: 'Pending..' };
 
-        fetch(`http://localhost:7777/updateStatus/${id}`, {
+        fetch(`https://tour-server-iota.vercel.app/updateStatus/${id}`, {
             method: 'PATCH',  //'PUT'
             headers: {
                 "Content-Type": "application/json",
@@ -72,7 +72,7 @@ const ManageAllOrders = () => {
         })
             .then(res => res.json())
             .then(data => {
-                fetch('http://localhost:7777/manageAllOrders')
+                fetch('https://tour-server-iota.vercel.app/manageAllOrders')
                     .then(res => res.json())
                     .then(data => {
                         // console.log('manage Or:', data);

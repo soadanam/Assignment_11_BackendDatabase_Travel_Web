@@ -10,7 +10,7 @@ const AddAService = () => {
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         // console.log("Add service form DATA:", data);
-        axios.post('http://localhost:7777/addNewService', {
+        axios.post('https://tour-server-iota.vercel.app/addNewService', {
             data: data
         });
 

@@ -87,7 +87,7 @@ const Header = () => {
                                     <li><a href='/AddAService'>Add New Service</a></li>
                                 </ul>
                             </li>
-                            <li><a href='/PlaceOrder/112233'>Place Orders</a></li>
+                            <li><a href='/PlaceOrder'>Place Orders</a></li>
                         </ul>
                     </div>
                     <a href='/' className="logo btn btn-ghost normal-case text-xl"> <img className='w-6' src={logo} alt="" /> Travelian</a>

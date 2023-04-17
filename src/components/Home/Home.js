@@ -39,7 +39,7 @@ const Home = () => {
     // console.log("STATE ??", packages)
 
     ////Loading data from Backend (mongodb) by Fetching
-    const url = 'https://tour-server-iota.vercel.app/packages';
+    const url = 'https://travel-server-gilt.vercel.app/packages';
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -61,7 +61,7 @@ const Home = () => {
 
     //Using 'Fetch' to GET the 'new services'
     useEffect(() => {
-        fetch('https://tour-server-iota.vercel.app/newNewServices')
+        fetch('https://travel-server-gilt.vercel.app/newNewServices')
             .then(res => res.json())
             .then(data => {
                 // console.log("SERvice console inside fetch::", data)
